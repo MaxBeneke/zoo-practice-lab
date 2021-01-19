@@ -43,6 +43,13 @@ class Zoo
         self.all_animals.map{|animal|animal.species}.uniq
     end
     
+    def self.find_by_name(name)
+        self.all.select{|zoo| zoo.name == name}
+    end
+
+    def origins 
+        self.all_animals.map{|animal|animal.origin}.uniq
+    end
 
 
 end

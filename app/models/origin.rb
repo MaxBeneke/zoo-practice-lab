@@ -14,5 +14,31 @@
 
 
 class Origin
+attr_reader :continent, :country
+
+@@all = []
+
+def initialize(continent, country)
+    @continent = continent
+    @country = country
+    @@all << self 
+end
+
+def self.all
+    @@all
+end
+
+def animals 
+    Animal.all.select{|animal|animal.origin == self}
+end
+
+def zoos
+    self.animals.map{|animal|animal.zoo}
+end
+
+def animal_number
+end
+
+
 
 end
