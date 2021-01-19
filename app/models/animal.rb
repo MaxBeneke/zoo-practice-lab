@@ -15,7 +15,7 @@ class Animal
 
     @@all = []
 
-    def initialize (species,name, zoo, origin)
+    def initialize (name, species, zoo, origin)
         @species= species
         @name= name
         @zoo= zoo
